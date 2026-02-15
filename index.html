@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Zandu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="bg-ligth">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow w-100" style="max-width: 700px;">
+      <div>
+        <nav class="navbar fixed-top navbar-light bg-light g-5">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bolder" href="/historico.html" >HISTÓRICO</a>
+          </div>
+        </nav>
+      </div>
+      <!--PARTE SUPERIOR/ Visor-->
+      <div class="card-header text-end bg-dark text-white">
+        <div class="fs-3 fw-bold" id="display">0</div>
+      </div>
+      <!--PARTE CENTRAL-->
+      <div class="card-body">
+        <div class="row g-4 text-center">
+          <!--Linha 1 -->
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('7')">7</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('8')">8</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('9')">9</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('/')">÷</button></div>
+          <!--Linha 2-->
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('4')">4</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('5')">5</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('6')">6</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('x')">×</button></div>
+          <!--Linha 3-->
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('1')">1</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('2')">2</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('7')">3</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('-')">−</button></div>
+          <!--Linha 4-->
+          <div class="col-6"><button class="btn btn-secondary w-100" onclick="adicionarValor('0')">0</button></div>
+          <div class="col-3"><button class="btn btn-secondary w-100" onclick="adicionarValor('.')">.</button></div>
+          <div class="col-3"><button class="btn btn-primary w-100" onclick="adicionarValor('+')">+</button></div>
+          <!--Linha 5-->
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('%')">%</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('^')">^</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('(1/')">1/x</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="adicionarValor('sqrt(')">R</button></div>      
+            <!--Linha 6-->
+            <div class="col-3"><button class="btn btn-primary w-100 " onclick="adicionarValor('(')">(</button></div>
+            <div class="col-3"><button class="btn btn-primary w-100 " onclick="adicionarValor(')')">)</button></div>
+            <div class="col-6"><button class="btn btn-success w-100" onclick="enviarParaJson()">=</button></div>
+        </div>
+      </div>
+      <!--PARTE INFERIOR-->
+      <div class="card-footer d-flex justify-content-between">
+        <button class="btn btn-outline-danger" onclick="apagarTudo()">AC</button>
+        <button class="btn btn-outline-secondary" onclick="apagar()">⌫</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+</html>
